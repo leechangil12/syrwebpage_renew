@@ -1,0 +1,66 @@
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="./sm.js"></script>
+	<link rel="stylesheet" href="./sm.css">
+</head>
+
+<body>
+	<header>header</header>
+	<section id="screen0" class="scroll">
+		<div class="wallper">
+			<div class="slidershow middle">
+				<div class="slides">
+					<input type="radio" name="r" id="r1" checked>
+					<input type="radio" name="r" id="r2">
+					<input type="radio" name="r" id="r3">
+					<input type="radio" name="r" id="r4">
+					<input type="radio" name="r" id="r5">
+					<div class="slide s1">
+						<img src="./img/1.jpg" alt=".">
+					</div>
+					<div class="slide">
+						<img src="./img/2.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="./img/3.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="./img/4.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="./img/5.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="navigation">
+					<label for="r1" class="bar navbar1"></label>
+					<label for="r2" class="bar navbar2"></label>
+					<label for="r3" class="bar navbar3"></label>
+					<label for="r4" class="bar navbar4"></label>
+					<label for="r5" class="bar navbar5"></label>
+				</div>
+			</div>
+
+			<nav class="floating-menu">
+				<ul>
+					<li data-gotosection='screen1'><a href="#">About</a></li>
+					<li data-gotosection='screen2'><a href="#">Services</a></li>
+					<li data-gotosection='screen3'><a href="#">Team</a></li>
+					<li data-gotosection='screen4'><a href="#">Contact</a></li>
+					<li data-gotosection='screen5'><a href="#">Q&A</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<section id="screen1" class="scroll">About</section>
+	<section id="screen2" class="scroll">Services</section>
+	<section id="screen3" class="scroll">Team</section>
+	<section id="screen4" class="scroll">Contact</section>
+	<section id="screen5" class="scroll">Q&A</section>
+	<footer>footer</footer>
+</body>
+
+</html>

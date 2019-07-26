@@ -1,0 +1,268 @@
+/*
+Tutorial Name: Scroll To Top Then Fixed Navigation Effect With JQuery and CSS
+https://stanhub.com/scroll-to-top-then-fixed-navigation-effect-with-jquery-and-css-free-download/
+Description: Create a sticky navigation bar that remains fixed to the top after scroll
+Author: Stan Kostadinov
+Author URI: https://stanhub.com
+Version: 1.0.0 - 11.01.2014
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* This class is added on scroll */
+.fixed {
+  position: fixed;
+  top: 50;
+  height: 70px; /*border 포함*/
+  z-index: 1;
+  width:1200px;
+}
+
+body {
+  color: #fff;
+  font-family: 'open-sans-bold', AvenirNext-Medium, sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+/* Navigation Settings */
+nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #000;
+}
+
+nav ul{
+  font-size: 0px;
+}
+
+nav li {
+  font-size: 17px;
+  display: inline-block;
+  padding: 24px 10px;
+  width: 20%;
+  transition: 1s;
+}
+
+/*
+nav li:first-child {
+  border-left: 1px solid #c78897;
+  border-radius: 1em 0px 0px 1em;
+}
+
+nav.fixed li:first-child {
+  border-radius: 0px;
+}
+
+nav li:last-child {
+  border-right: 1px solid #c78897;
+  border-radius: 0px 1em 1em 0em;
+}
+
+nav.fixed li:last-child {
+  border-radius: 0px;
+}
+*/
+
+nav li a {
+  color: #757575;
+  text-transform: uppercase;
+}
+
+nav li.on {
+  background-color: #c78897;
+  opacity: 0.5;
+}
+
+nav li.on a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+section {
+  height: 100vh;
+}
+
+ /* wallper */
+ .wallper{
+   width: 1200px;
+   height: 100%;
+   margin: 0 auto;
+   background-color: red;
+   position: relative;
+ }
+
+/* Screens Settings */
+#screen0 {
+  background: #43b29d;
+}
+
+#screen1 {
+  background: #ffa4de;
+}
+
+
+#screen2 {
+  background: #efc94d;
+}
+
+#screen3 {
+  background: #e1793d;
+}
+
+#screen4 {
+  background: #b5c5c2
+}
+
+#screen5 {
+  background: #4d8def
+}
+
+/*header*/
+header {
+  background: #e13d5a;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+/*footer*/
+footer {
+  background: #2f2f2f;
+  height: 200px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 520px) {
+  nav li {
+    padding: 24px 4px;
+  }
+
+  nav li a {
+    font-size: 14px;
+  }
+}
+
+/* slider show */
+.slidershow{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.navigation{
+  width:50%;
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.bar{
+  width: 20%;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex;
+}
+
+.bar::after{
+  content: ' ';
+  background-position: center;
+  background-size: cover;
+  background-clip: border-box;
+  height: 50px;
+  width: 100%;
+  margin-top: -55px;
+  opacity: 0;
+  transition: 1s;
+  outline: 2px solid #fff;
+}
+
+.navbar1::after{
+  background-image: url("./img/1.jpg");
+}
+
+.navbar2::after{
+  background-image: url("./img/2.jpg");
+}
+
+.navbar3::after{
+  background-image: url("./img/3.jpg");
+}
+
+.navbar4::after{
+  background-image: url("./img/4.jpg");
+}
+
+.navbar5::after{
+  background-image: url("./img/5.jpg");
+}
+
+.bar:hover{
+  background: #fff;
+}
+
+.bar:hover::after{
+  opacity: 0.8;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
